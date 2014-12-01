@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="uwosh.librarycache">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <!-- Include the sub-packages that use their own configure.zcml files. -->
+  <include package=".browser" />
+  <include package=".content" />
+  <!-- <i18n:registerTranslations directory="locales" /> -->
+  
+  <!-- Register the installation GenericSetup extension profile -->
+  <genericsetup:registerProfile
+      name="default"
+      title="uwosh.librarycache"
+      directory="profiles/default"
+      description="A external data cache."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  
+  <!-- -*- extra stuff goes here -*- -->
+    <genericsetup:importStep
+      name="uwosh.librarycache.various"
+      title="uwosh.librarycache: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="uwosh.librarycache.setuphandlers.setupVarious">
+	</genericsetup:importStep>
+	
+	
+</configure>

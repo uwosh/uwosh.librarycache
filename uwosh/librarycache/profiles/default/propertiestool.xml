@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+	<object name="cache_objects" meta_type="Plone Property Sheet">
+		<property name="title" type="string">Library Cache Objects</property>
+		<property name="cache_types" type="lines" purge="False">
+			<element value="DummyCache" />
+		</property>
+	</object>
+</object>

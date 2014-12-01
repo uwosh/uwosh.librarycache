@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+	
+
+    <metal:content-core fill-slot="content-core">
+    	
+		<div class="headline" style="color: darkred;">
+			This page is only visible to users with moderation permissions.
+		</div>
+		<br />
+		
+		<div>
+			<form method="get" tal:attributes="action string:${context/absolute_url}/edit">
+				<input type="hidden" name="cacheReference" tal:attributes="value context/getCacheReference" />
+				<input type="hidden" value="1" name="form.submitted" originalvalue="1" />
+				<input type="submit" name="form.button.save" value="Update Cache" />
+			</form>
+		</div>
+		
+		<br /><br /><br />
+		
+		<div>
+			<label>Cache Type: </label>
+			<span tal:content="context/getCacheReference" />
+		</div>
+		<div>
+			<label>Created: </label>
+			<span tal:content="context/getRawCreation_date" />
+		</div>
+		<div>
+			<label>Updated: </label>
+			<span tal:content="context/getRawModification_date" />
+		</div>
+		<div>
+			<label>Cache Content: </label>
+			<span tal:content="context/getCache" />
+		</div>
+    </metal:content-core>
+
+</body>
+</html>

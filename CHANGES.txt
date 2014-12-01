@@ -1,0 +1,39 @@
+Changelog
+=========
+
+0.0.4
+------------------
+- Cron hook can update modification dates in catalog and obj.
+
+
+0.0.3
+------------------
+- Now a way to Crontab into the Cache, see README.txt
+- Side Note:  Seems very stable, been running these for 7 months no issues.
+- Release Candidate.
+
+
+0.0.2a
+------------------
+- working version
+- made cacheview only visible to mod privied members
+- cacheview now has a refresh this cache button
+
+
+0.0.1a
+------------------
+- working version
+- adapter setup for storing objects.
+- custom content type LibraryCache
+- browserviews
+- core class for handling adapters
+
+0.0.1 
+------------------
+- Initial Release
+
+0.0.1 (xxxx-xx-xx)
+------------------
+
+- Created recipe with ZopeSkel
+  [David Hietpas]

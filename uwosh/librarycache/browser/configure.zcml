@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="uwosh.librarycache">
+
+    <include package="plone.app.contentmenu" />
+
+        
+    <browser:page
+		for="..content.librarycache.ILibraryCache"
+		name="cache"
+        class=".cache.LibraryCache"
+		template="templates/cache.pt"
+		permission="zope2.View"
+    />
+    
+
+</configure>
